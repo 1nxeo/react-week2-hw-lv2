@@ -1,6 +1,5 @@
 // action value
 const NEW_TODO = 'app/todos/new'
-const EDIT_TODO = 'app/todos/start_edit'
 const DONE_TODO = 'app/todos/done'
 const DELETE_TODO = 'app/todos/delete'
 const UPDATE_TODO = 'app/todos/update'
