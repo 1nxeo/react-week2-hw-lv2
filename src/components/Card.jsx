@@ -1,23 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import {
-  deleteTodo,
-  doneTodo,
-  editTodo,
-  updateTodo,
-} from "../redux/modules/todos";
+import { deleteTodo, doneTodo, updateTodo } from "../redux/modules/todos";
 import styled from "styled-components";
 
 function Card(props) {
   const dispatch = useDispatch();
   const [editTitle, setEditTitle] = useState(props.title);
   const [editDesc, setEditDesc] = useState(props.desc);
+  const [edit, setEdit] = useState(false);
   const updates = { editTitle, editDesc };
 
   return (
     <CardBox>
-      {props.todo.isEdit ? (
+      {edit ? (
         <EditForm>
           <input
             type="text"
@@ -30,10 +26,19 @@ function Card(props) {
             onChange={(e) => setEditDesc(e.target.value)}
           />
           <div>
-            <button onClick={(e) => dispatch(updateTodo(props.todo, updates))}>
+            <button
+              onClick={(e) => {
+                dispatch(updateTodo(props.todo, updates));
+                setEdit((pre) => !pre);
+              }}
+            >
               save changes
             </button>
-            <button onClick={(e) => dispatch(editTodo(props.todo))}>
+            <button
+              onClick={() => {
+                setEdit((pre) => !pre);
+              }}
+            >
               cancel
             </button>
           </div>
@@ -45,7 +50,13 @@ function Card(props) {
           <div>
             <Link to={`/details/${props.todo.id}`}>for more details...</Link>
           </div>
-          <button onClick={(e) => dispatch(editTodo(props.todo))}>edit</button>
+          <button
+            onClick={() => {
+              setEdit((pre) => !pre);
+            }}
+          >
+            edit
+          </button>
           <button onClick={(e) => dispatch(doneTodo(props.todo))}>
             {props.todo.isDone ? "cancel" : "finish"}
           </button>

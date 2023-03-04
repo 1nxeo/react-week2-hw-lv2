@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Card from "../components/Card";
 import Form from "../components/Form";
@@ -7,6 +7,10 @@ import GlobalStyle from "../static/GlobalStyle";
 
 function Home() {
   const todos = useSelector((state) => state.todos);
+
+  useEffect(() => {
+    console.log("hello!");
+  }, []);
 
   return (
     <Wrapper>
