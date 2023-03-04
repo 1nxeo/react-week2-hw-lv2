@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import GlobalStyle from "../static/GlobalStyle";
 import styled from "styled-components";
 
+import Button from "../components/Button";
+
 function Detail() {
   const navigate = useNavigate();
   const params = useParams();

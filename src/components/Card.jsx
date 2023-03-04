@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteTodo, doneTodo, updateTodo } from "../redux/modules/todos";
 import styled from "styled-components";
+import Button from "./Button";
 
 function Card(props) {
   const dispatch = useDispatch();
@@ -26,21 +27,21 @@ function Card(props) {
             onChange={(e) => setEditDesc(e.target.value)}
           />
           <div>
-            <button
+            <Button
               onClick={(e) => {
                 dispatch(updateTodo(props.todo, updates));
                 setEdit((pre) => !pre);
               }}
             >
               save changes
-            </button>
-            <button
+            </Button>
+            <Button
               onClick={() => {
                 setEdit((pre) => !pre);
               }}
             >
               cancel
-            </button>
+            </Button>
           </div>
         </EditForm>
       ) : (
@@ -50,19 +51,19 @@ function Card(props) {
           <div>
             <Link to={`/details/${props.todo.id}`}>for more details...</Link>
           </div>
-          <button
+          <Button
             onClick={() => {
               setEdit((pre) => !pre);
             }}
           >
             edit
-          </button>
-          <button onClick={(e) => dispatch(doneTodo(props.todo))}>
+          </Button>
+          <Button onClick={(e) => dispatch(doneTodo(props.todo))}>
             {props.todo.isDone ? "cancel" : "finish"}
-          </button>
-          <button onClick={(e) => dispatch(deleteTodo(props.todo))}>
+          </Button>
+          <Button onClick={(e) => dispatch(deleteTodo(props.todo))}>
             delete
-          </button>
+          </Button>
         </Content>
       )}
     </CardBox>
@@ -72,7 +73,7 @@ function Card(props) {
 const CardBox = styled.div`
   width: 300px;
   height: 200px;
-  border: 1px solid greenyellow;
+  border: 2px solid greenyellow;
   border-radius: 10px;
   margin: 10px;
   display: flex;

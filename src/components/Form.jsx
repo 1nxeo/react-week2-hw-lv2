@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNewTodo } from "../redux/modules/todos";
 import styled from "styled-components";
+import InputBtn from "./InputBtn";
 
 function Form() {
   const [newTitle, setNewTitle] = useState("");
@@ -37,7 +38,7 @@ function Form() {
           />
         </Input>
         <Input>
-          <input type="submit" value="Add Todo" />
+          <InputBtn type="submit" value="Add Todo" />
         </Input>
       </Addform>
     </form>
