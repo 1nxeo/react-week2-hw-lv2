@@ -9,7 +9,7 @@ function Home() {
   const todos = useSelector((state) => state.todos);
 
   return (
-    <Web>
+    <Wrapper>
       <GlobalStyle />
       <Header>
         <h1>Todo List</h1>
@@ -47,11 +47,11 @@ function Home() {
           })}
         </CardList>
       </main>
-    </Web>
+    </Wrapper>
   );
 }
 
-const Web = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,6 +59,7 @@ const Web = styled.div`
   max-width: 1200px;
   min-width: 800px;
   height: auto;
+  margin: auto;
 `;
 
 const Header = styled.div`
@@ -77,7 +78,7 @@ const CardList = styled.div`
 const AddForm = styled.div`
   display: flex;
   margin: 5px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 

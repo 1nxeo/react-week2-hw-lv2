@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
 }
     font-family: 'Ansungtangmyun-Bold' , sans-serif;
     line-height: 1.5;
+    max-width: 1200px;
+    min-height: 800px;
   }
 `;
 

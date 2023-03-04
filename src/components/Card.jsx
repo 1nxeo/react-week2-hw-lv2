@@ -74,6 +74,8 @@ const Content = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: keep-all;
+  word-wrap: normal;
 `;
 
 const EditForm = styled.div`

@@ -17,23 +17,42 @@ function Form() {
         setNewDesc("");
       }}
     >
-      <label>todo : </label>
-      <input
-        type="text"
-        value={newTitle}
-        required
-        onChange={(e) => setNewTitle(e.target.value)}
-      />
-      <label>plan : </label>
-      <input
-        type="text"
-        value={newDesc}
-        required
-        onChange={(e) => setNewDesc(e.target.value)}
-      />
-      <input type="submit" value="Add Todo" />
+      <Addform>
+        <Input>
+          <label>todo : </label>
+          <input
+            type="text"
+            value={newTitle}
+            required
+            onChange={(e) => setNewTitle(e.target.value)}
+          />
+        </Input>
+        <Input>
+          <label>plan : </label>
+          <input
+            type="text"
+            value={newDesc}
+            required
+            onChange={(e) => setNewDesc(e.target.value)}
+          />
+        </Input>
+        <Input>
+          <input type="submit" value="Add Todo" />
+        </Input>
+      </Addform>
     </form>
   );
 }
+
+const Addform = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+`;
+
+const Input = styled.div`
+  margin: 15px;
+`;
 
 export default Form;

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import GlobalStyle from "../static/GlobalStyle";
 
 function Detail() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ function Detail() {
 
   return (
     <>
+      <GlobalStyle />
       <h3>{foundData.id}</h3>
       <h4>{foundData.title}</h4>
       <p>{foundData.desc}</p>
