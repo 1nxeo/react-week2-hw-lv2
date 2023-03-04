@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import GlobalStyle from "../static/GlobalStyle";
 import styled from "styled-components";
-
 import Button from "../components/Button";
 
 function Detail() {
@@ -22,13 +21,13 @@ function Detail() {
           <h2>{foundData.id}</h2>
           <h2>{foundData.title}</h2>
           <p>{foundData.desc}</p>
-          <button
+          <Button
             onClick={() => {
               navigate("/");
             }}
           >
             Back
-          </button>
+          </Button>
         </DetailContent>
       </DetailWrapper>
     </>
