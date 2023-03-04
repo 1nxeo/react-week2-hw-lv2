@@ -75,7 +75,7 @@ const initialState = [{
           isDone:false,
           isEdit:false
         }
-        alert("you just add new thing to do!")
+        alert("you just added new thing to do!")
         return state = [...state,newTodo]
 
         case DELETE_TODO:

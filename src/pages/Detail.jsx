@@ -22,7 +22,7 @@ function Detail() {
           navigate("/");
         }}
       >
-        Home
+        Back
       </button>
     </>
   );
