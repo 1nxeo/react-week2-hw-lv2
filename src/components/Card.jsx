@@ -49,7 +49,12 @@ function Card(props) {
           <h3>{props.title}</h3>
           <p>{props.desc}</p>
           <div>
-            <Link to={`/details/${props.todo.id}`}>for more details...</Link>
+            <Link
+              to={`/details/${props.todo.id}`}
+              style={{ color: "darkorange", visited: "gray", active: "red" }}
+            >
+              for more details...
+            </Link>
           </div>
           <Button
             onClick={() => {
@@ -73,7 +78,7 @@ function Card(props) {
 const CardBox = styled.div`
   width: 300px;
   height: 200px;
-  border: 2px solid greenyellow;
+  border: 3px solid greenyellow;
   border-radius: 10px;
   margin: 10px;
   display: flex;

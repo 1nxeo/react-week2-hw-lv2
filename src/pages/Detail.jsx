@@ -10,7 +10,7 @@ function Detail() {
   const params = useParams();
   const todos = useSelector((state) => state.todos);
   const foundData = todos.find((item) => {
-    return item.id === parseInt(params.id);
+    return item.id === Number(params.id);
   });
 
   return (

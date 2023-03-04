@@ -69,7 +69,7 @@ const initialState = [{
     switch (action.type) {
       case NEW_TODO:
         const newTodo = {
-          id: state.length + 1,
+          id: Math.random(),
           title:action.payload.newTitle,
           desc :action.payload.newDesc,
           isDone:false,
