@@ -14,8 +14,8 @@ function Detail() {
   return (
     <>
       <GlobalStyle />
-      <h3>{foundData.id}</h3>
-      <h4>{foundData.title}</h4>
+      <h2>{foundData.id}</h2>
+      <h2>{foundData.title}</h2>
       <p>{foundData.desc}</p>
       <button
         onClick={() => {
