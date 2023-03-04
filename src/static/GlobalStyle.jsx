@@ -11,8 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
     font-family: 'NeoDunggeunmoPro-Regular' , sans-serif;
     line-height: 1.5;
-    max-width: 1200px;
-    min-height: 800px;
+    width: 100%;
   }
 `;
 

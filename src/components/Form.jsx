@@ -53,6 +53,9 @@ const Addform = styled.div`
 
 const Input = styled.div`
   margin: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
 export default Form;

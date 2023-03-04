@@ -87,11 +87,13 @@ const Content = styled.div`
   text-overflow: ellipsis;
   word-break: keep-all;
   word-wrap: normal;
+  width: 70%;
 `;
 
 const EditForm = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 export default Card;
